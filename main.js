@@ -42,7 +42,7 @@ async function task2() {
         id: el.id,
         fullName: `${el.firstName} ${el.lastName}`,
         email: el.email,
-        birthData: formatDate(el.birthDate),
+        birthDate: formatDate(el.birthDate),
       };
     });
     endusers.push(...parsedUsers);
