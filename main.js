@@ -26,7 +26,7 @@ async function task1() {
   await fs.writeFile("recipes.json", JSON.stringify(endrecipes));
 }
 
-// task1();
+task1();
 
 // 2) წამოიღეთ ინფორმაცია ამ სერვერიდან https://dummyjson.com/users
 // გაფარსეთ დეითა და ამოიღეთ შემდეგი მონაცემები, id, fullName, email, birthDate,
@@ -43,6 +43,7 @@ async function task2() {
         fullName: `${el.firstName} ${el.lastName}`,
         email: el.email,
         birthDate: formatDate(el.birthDate),
+        country: el.address.country,
       };
     });
     endusers.push(...parsedUsers);
@@ -54,7 +55,7 @@ function formatDate(date) {
   return moment(date).format("MMMM Do YYYY, h:mm:ss a");
 }
 
-// task2();
+task2();
 
 // 3 ქულა ვისაც გინდათ დამატებით დაამატეთ რაიმე (descending order)
 
